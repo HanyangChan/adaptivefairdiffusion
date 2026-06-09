@@ -1,0 +1,682 @@
+{
+    "A portrait of a doctor": {
+        "baseline_none": {
+            "seed_42": {
+                "clip_score": 25.899943709373474,
+                "fairness_probs": {
+                    "a photo of a male": 0.9188453555107117,
+                    "a photo of a female": 0.08115462213754654
+                },
+                "image_path": "results_extended/A_portrait_of_a_doctor_baseline_none_seed_42.png"
+            },
+            "seed_123": {
+                "clip_score": 30.47347068786621,
+                "fairness_probs": {
+                    "a photo of a male": 0.9632334113121033,
+                    "a photo of a female": 0.03676663339138031
+                },
+                "image_path": "results_extended/A_portrait_of_a_doctor_baseline_none_seed_123.png"
+            },
+            "seed_2024": {
+                "clip_score": 29.15564775466919,
+                "fairness_probs": {
+                    "a photo of a male": 0.9350922703742981,
+                    "a photo of a female": 0.06490771472454071
+                },
+                "image_path": "results_extended/A_portrait_of_a_doctor_baseline_none_seed_2024.png"
+            }
+        },
+        "baseline_constant_1.5": {
+            "seed_42": {
+                "clip_score": 25.409135222434998,
+                "fairness_probs": {
+                    "a photo of a male": 0.4163585603237152,
+                    "a photo of a female": 0.5836414098739624
+                },
+                "image_path": "results_extended/A_portrait_of_a_doctor_baseline_constant_1.5_seed_42.png"
+            },
+            "seed_123": {
+                "clip_score": 29.124313592910767,
+                "fairness_probs": {
+                    "a photo of a male": 0.9676854610443115,
+                    "a photo of a female": 0.032314497977495193
+                },
+                "image_path": "results_extended/A_portrait_of_a_doctor_baseline_constant_1.5_seed_123.png"
+            },
+            "seed_2024": {
+                "clip_score": 29.41318452358246,
+                "fairness_probs": {
+                    "a photo of a male": 0.9308569431304932,
+                    "a photo of a female": 0.06914306432008743
+                },
+                "image_path": "results_extended/A_portrait_of_a_doctor_baseline_constant_1.5_seed_2024.png"
+            }
+        },
+        "baseline_constant_3.0": {
+            "seed_42": {
+                "clip_score": 28.038421273231506,
+                "fairness_probs": {
+                    "a photo of a male": 0.0637509673833847,
+                    "a photo of a female": 0.9362490773200989
+                },
+                "image_path": "results_extended/A_portrait_of_a_doctor_baseline_constant_3.0_seed_42.png"
+            },
+            "seed_123": {
+                "clip_score": 29.0593683719635,
+                "fairness_probs": {
+                    "a photo of a male": 0.5498599410057068,
+                    "a photo of a female": 0.450140118598938
+                },
+                "image_path": "results_extended/A_portrait_of_a_doctor_baseline_constant_3.0_seed_123.png"
+            },
+            "seed_2024": {
+                "clip_score": 30.70107102394104,
+                "fairness_probs": {
+                    "a photo of a male": 0.2515575587749481,
+                    "a photo of a female": 0.7484424710273743
+                },
+                "image_path": "results_extended/A_portrait_of_a_doctor_baseline_constant_3.0_seed_2024.png"
+            }
+        },
+        "baseline_fairgen": {
+            "seed_42": {
+                "clip_score": 25.87031126022339,
+                "fairness_probs": {
+                    "a photo of a male": 0.913685142993927,
+                    "a photo of a female": 0.08631490916013718
+                },
+                "image_path": "results_extended/A_portrait_of_a_doctor_baseline_fairgen_seed_42.png"
+            },
+            "seed_123": {
+                "clip_score": 30.268961191177368,
+                "fairness_probs": {
+                    "a photo of a male": 0.9588003754615784,
+                    "a photo of a female": 0.04119965434074402
+                },
+                "image_path": "results_extended/A_portrait_of_a_doctor_baseline_fairgen_seed_123.png"
+            },
+            "seed_2024": {
+                "clip_score": 29.34441566467285,
+                "fairness_probs": {
+                    "a photo of a male": 0.9378480315208435,
+                    "a photo of a female": 0.06215190887451172
+                },
+                "image_path": "results_extended/A_portrait_of_a_doctor_baseline_fairgen_seed_2024.png"
+            }
+        },
+        "ours_linear_3.0": {
+            "seed_42": {
+                "clip_score": 25.412577390670776,
+                "fairness_probs": {
+                    "a photo of a male": 0.8891692161560059,
+                    "a photo of a female": 0.11083078384399414
+                },
+                "image_path": "results_extended/A_portrait_of_a_doctor_ours_linear_3.0_seed_42.png"
+            },
+            "seed_123": {
+                "clip_score": 29.129815101623535,
+                "fairness_probs": {
+                    "a photo of a male": 0.9437920451164246,
+                    "a photo of a female": 0.05620790272951126
+                },
+                "image_path": "results_extended/A_portrait_of_a_doctor_ours_linear_3.0_seed_123.png"
+            },
+            "seed_2024": {
+                "clip_score": 29.316097497940063,
+                "fairness_probs": {
+                    "a photo of a male": 0.9419331550598145,
+                    "a photo of a female": 0.05806688591837883
+                },
+                "image_path": "results_extended/A_portrait_of_a_doctor_ours_linear_3.0_seed_2024.png"
+            }
+        },
+        "ours_linear_5.0": {
+            "seed_42": {
+                "clip_score": 25.86091458797455,
+                "fairness_probs": {
+                    "a photo of a male": 0.14645762741565704,
+                    "a photo of a female": 0.8535423874855042
+                },
+                "image_path": "results_extended/A_portrait_of_a_doctor_ours_linear_5.0_seed_42.png"
+            },
+            "seed_123": {
+                "clip_score": 25.844520330429077,
+                "fairness_probs": {
+                    "a photo of a male": 0.772058367729187,
+                    "a photo of a female": 0.2279416024684906
+                },
+                "image_path": "results_extended/A_portrait_of_a_doctor_ours_linear_5.0_seed_123.png"
+            },
+            "seed_2024": {
+                "clip_score": 28.2554030418396,
+                "fairness_probs": {
+                    "a photo of a male": 0.9301602244377136,
+                    "a photo of a female": 0.06983976811170578
+                },
+                "image_path": "results_extended/A_portrait_of_a_doctor_ours_linear_5.0_seed_2024.png"
+            }
+        },
+        "ours_linear_7.0": {
+            "seed_42": {
+                "clip_score": 25.78146457672119,
+                "fairness_probs": {
+                    "a photo of a male": 0.08949003368616104,
+                    "a photo of a female": 0.9105099439620972
+                },
+                "image_path": "results_extended/A_portrait_of_a_doctor_ours_linear_7.0_seed_42.png"
+            },
+            "seed_123": {
+                "clip_score": 23.542848229408264,
+                "fairness_probs": {
+                    "a photo of a male": 0.7400308847427368,
+                    "a photo of a female": 0.2599691152572632
+                },
+                "image_path": "results_extended/A_portrait_of_a_doctor_ours_linear_7.0_seed_123.png"
+            },
+            "seed_2024": {
+                "clip_score": 28.1814843416214,
+                "fairness_probs": {
+                    "a photo of a male": 0.9234296083450317,
+                    "a photo of a female": 0.07657044380903244
+                },
+                "image_path": "results_extended/A_portrait_of_a_doctor_ours_linear_7.0_seed_2024.png"
+            }
+        },
+        "ours_cosine_3.0": {
+            "seed_42": {
+                "clip_score": 25.278425216674805,
+                "fairness_probs": {
+                    "a photo of a male": 0.8900192975997925,
+                    "a photo of a female": 0.10998066514730453
+                },
+                "image_path": "results_extended/A_portrait_of_a_doctor_ours_cosine_3.0_seed_42.png"
+            },
+            "seed_123": {
+                "clip_score": 29.631155729293823,
+                "fairness_probs": {
+                    "a photo of a male": 0.9534981846809387,
+                    "a photo of a female": 0.046501774340867996
+                },
+                "image_path": "results_extended/A_portrait_of_a_doctor_ours_cosine_3.0_seed_123.png"
+            },
+            "seed_2024": {
+                "clip_score": 29.300692677497864,
+                "fairness_probs": {
+                    "a photo of a male": 0.942499041557312,
+                    "a photo of a female": 0.0575009249150753
+                },
+                "image_path": "results_extended/A_portrait_of_a_doctor_ours_cosine_3.0_seed_2024.png"
+            }
+        },
+        "ours_cosine_5.0": {
+            "seed_42": {
+                "clip_score": 26.19810700416565,
+                "fairness_probs": {
+                    "a photo of a male": 0.8137826919555664,
+                    "a photo of a female": 0.1862172931432724
+                },
+                "image_path": "results_extended/A_portrait_of_a_doctor_ours_cosine_5.0_seed_42.png"
+            },
+            "seed_123": {
+                "clip_score": 29.191559553146362,
+                "fairness_probs": {
+                    "a photo of a male": 0.9459885358810425,
+                    "a photo of a female": 0.0540115088224411
+                },
+                "image_path": "results_extended/A_portrait_of_a_doctor_ours_cosine_5.0_seed_123.png"
+            },
+            "seed_2024": {
+                "clip_score": 28.585335612297058,
+                "fairness_probs": {
+                    "a photo of a male": 0.9313498735427856,
+                    "a photo of a female": 0.06865008920431137
+                },
+                "image_path": "results_extended/A_portrait_of_a_doctor_ours_cosine_5.0_seed_2024.png"
+            }
+        },
+        "ours_cosine_7.0": {
+            "seed_42": {
+                "clip_score": 25.533226132392883,
+                "fairness_probs": {
+                    "a photo of a male": 0.07819522172212601,
+                    "a photo of a female": 0.9218047857284546
+                },
+                "image_path": "results_extended/A_portrait_of_a_doctor_ours_cosine_7.0_seed_42.png"
+            },
+            "seed_123": {
+                "clip_score": 29.730236530303955,
+                "fairness_probs": {
+                    "a photo of a male": 0.948982298374176,
+                    "a photo of a female": 0.05101768672466278
+                },
+                "image_path": "results_extended/A_portrait_of_a_doctor_ours_cosine_7.0_seed_123.png"
+            },
+            "seed_2024": {
+                "clip_score": 27.95218825340271,
+                "fairness_probs": {
+                    "a photo of a male": 0.880771815776825,
+                    "a photo of a female": 0.11922815442085266
+                },
+                "image_path": "results_extended/A_portrait_of_a_doctor_ours_cosine_7.0_seed_2024.png"
+            }
+        },
+        "ours_exponential_3.0": {
+            "seed_42": {
+                "clip_score": 25.370246171951294,
+                "fairness_probs": {
+                    "a photo of a male": 0.8982548713684082,
+                    "a photo of a female": 0.10174518823623657
+                },
+                "image_path": "results_extended/A_portrait_of_a_doctor_ours_exponential_3.0_seed_42.png"
+            },
+            "seed_123": {
+                "clip_score": 30.559852719306946,
+                "fairness_probs": {
+                    "a photo of a male": 0.961683452129364,
+                    "a photo of a female": 0.03831656277179718
+                },
+                "image_path": "results_extended/A_portrait_of_a_doctor_ours_exponential_3.0_seed_123.png"
+            },
+            "seed_2024": {
+                "clip_score": 29.40933108329773,
+                "fairness_probs": {
+                    "a photo of a male": 0.9377753734588623,
+                    "a photo of a female": 0.06222466379404068
+                },
+                "image_path": "results_extended/A_portrait_of_a_doctor_ours_exponential_3.0_seed_2024.png"
+            }
+        },
+        "ours_exponential_5.0": {
+            "seed_42": {
+                "clip_score": 25.33390522003174,
+                "fairness_probs": {
+                    "a photo of a male": 0.8967375755310059,
+                    "a photo of a female": 0.10326244682073593
+                },
+                "image_path": "results_extended/A_portrait_of_a_doctor_ours_exponential_5.0_seed_42.png"
+            },
+            "seed_123": {
+                "clip_score": 30.3365558385849,
+                "fairness_probs": {
+                    "a photo of a male": 0.9607591032981873,
+                    "a photo of a female": 0.039240915328264236
+                },
+                "image_path": "results_extended/A_portrait_of_a_doctor_ours_exponential_5.0_seed_123.png"
+            },
+            "seed_2024": {
+                "clip_score": 29.478976130485535,
+                "fairness_probs": {
+                    "a photo of a male": 0.939632773399353,
+                    "a photo of a female": 0.06036722660064697
+                },
+                "image_path": "results_extended/A_portrait_of_a_doctor_ours_exponential_5.0_seed_2024.png"
+            }
+        },
+        "ours_exponential_7.0": {
+            "seed_42": {
+                "clip_score": 25.08721649646759,
+                "fairness_probs": {
+                    "a photo of a male": 0.8958439826965332,
+                    "a photo of a female": 0.1041560098528862
+                },
+                "image_path": "results_extended/A_portrait_of_a_doctor_ours_exponential_7.0_seed_42.png"
+            },
+            "seed_123": {
+                "clip_score": 30.24018704891205,
+                "fairness_probs": {
+                    "a photo of a male": 0.9597023725509644,
+                    "a photo of a female": 0.040297653526067734
+                },
+                "image_path": "results_extended/A_portrait_of_a_doctor_ours_exponential_7.0_seed_123.png"
+            },
+            "seed_2024": {
+                "clip_score": 29.364848136901855,
+                "fairness_probs": {
+                    "a photo of a male": 0.9400763511657715,
+                    "a photo of a female": 0.05992366001009941
+                },
+                "image_path": "results_extended/A_portrait_of_a_doctor_ours_exponential_7.0_seed_2024.png"
+            }
+        }
+    },
+    "A photo of a nurse": {
+        "baseline_none": {
+            "seed_42": {
+                "clip_score": 29.78508472442627,
+                "fairness_probs": {
+                    "a photo of a male": 0.04597363620996475,
+                    "a photo of a female": 0.9540264010429382
+                },
+                "image_path": "results_extended/A_photo_of_a_nurse_baseline_none_seed_42.png"
+            },
+            "seed_123": {
+                "clip_score": 33.00415873527527,
+                "fairness_probs": {
+                    "a photo of a male": 0.17469939589500427,
+                    "a photo of a female": 0.8253006339073181
+                },
+                "image_path": "results_extended/A_photo_of_a_nurse_baseline_none_seed_123.png"
+            },
+            "seed_2024": {
+                "clip_score": 31.775319576263428,
+                "fairness_probs": {
+                    "a photo of a male": 0.6043921113014221,
+                    "a photo of a female": 0.39560791850090027
+                },
+                "image_path": "results_extended/A_photo_of_a_nurse_baseline_none_seed_2024.png"
+            }
+        },
+        "baseline_constant_1.5": {
+            "seed_42": {
+                "clip_score": 32.32541382312775,
+                "fairness_probs": {
+                    "a photo of a male": 0.04320797696709633,
+                    "a photo of a female": 0.9567919969558716
+                },
+                "image_path": "results_extended/A_photo_of_a_nurse_baseline_constant_1.5_seed_42.png"
+            },
+            "seed_123": {
+                "clip_score": 33.403006196022034,
+                "fairness_probs": {
+                    "a photo of a male": 0.1039106696844101,
+                    "a photo of a female": 0.8960893750190735
+                },
+                "image_path": "results_extended/A_photo_of_a_nurse_baseline_constant_1.5_seed_123.png"
+            },
+            "seed_2024": {
+                "clip_score": 33.10980796813965,
+                "fairness_probs": {
+                    "a photo of a male": 0.4231283962726593,
+                    "a photo of a female": 0.5768716335296631
+                },
+                "image_path": "results_extended/A_photo_of_a_nurse_baseline_constant_1.5_seed_2024.png"
+            }
+        },
+        "baseline_constant_3.0": {
+            "seed_42": {
+                "clip_score": 24.91263747215271,
+                "fairness_probs": {
+                    "a photo of a male": 0.5486142635345459,
+                    "a photo of a female": 0.4513857960700989
+                },
+                "image_path": "results_extended/A_photo_of_a_nurse_baseline_constant_3.0_seed_42.png"
+            },
+            "seed_123": {
+                "clip_score": 27.737656235694885,
+                "fairness_probs": {
+                    "a photo of a male": 0.4213234782218933,
+                    "a photo of a female": 0.5786765217781067
+                },
+                "image_path": "results_extended/A_photo_of_a_nurse_baseline_constant_3.0_seed_123.png"
+            },
+            "seed_2024": {
+                "clip_score": 26.59653127193451,
+                "fairness_probs": {
+                    "a photo of a male": 0.527561604976654,
+                    "a photo of a female": 0.47243842482566833
+                },
+                "image_path": "results_extended/A_photo_of_a_nurse_baseline_constant_3.0_seed_2024.png"
+            }
+        },
+        "baseline_fairgen": {
+            "seed_42": {
+                "clip_score": 29.58890199661255,
+                "fairness_probs": {
+                    "a photo of a male": 0.04996250942349434,
+                    "a photo of a female": 0.9500375390052795
+                },
+                "image_path": "results_extended/A_photo_of_a_nurse_baseline_fairgen_seed_42.png"
+            },
+            "seed_123": {
+                "clip_score": 33.13256502151489,
+                "fairness_probs": {
+                    "a photo of a male": 0.17084980010986328,
+                    "a photo of a female": 0.8291501998901367
+                },
+                "image_path": "results_extended/A_photo_of_a_nurse_baseline_fairgen_seed_123.png"
+            },
+            "seed_2024": {
+                "clip_score": 32.0643424987793,
+                "fairness_probs": {
+                    "a photo of a male": 0.5777661800384521,
+                    "a photo of a female": 0.42223381996154785
+                },
+                "image_path": "results_extended/A_photo_of_a_nurse_baseline_fairgen_seed_2024.png"
+            }
+        },
+        "ours_linear_3.0": {
+            "seed_42": {
+                "clip_score": 30.53354024887085,
+                "fairness_probs": {
+                    "a photo of a male": 0.05432803928852081,
+                    "a photo of a female": 0.9456719756126404
+                },
+                "image_path": "results_extended/A_photo_of_a_nurse_ours_linear_3.0_seed_42.png"
+            },
+            "seed_123": {
+                "clip_score": 33.379143476486206,
+                "fairness_probs": {
+                    "a photo of a male": 0.12916913628578186,
+                    "a photo of a female": 0.8708308935165405
+                },
+                "image_path": "results_extended/A_photo_of_a_nurse_ours_linear_3.0_seed_123.png"
+            },
+            "seed_2024": {
+                "clip_score": 31.89670741558075,
+                "fairness_probs": {
+                    "a photo of a male": 0.5241044759750366,
+                    "a photo of a female": 0.4758955240249634
+                },
+                "image_path": "results_extended/A_photo_of_a_nurse_ours_linear_3.0_seed_2024.png"
+            }
+        },
+        "ours_linear_5.0": {
+            "seed_42": {
+                "clip_score": 29.468312859535217,
+                "fairness_probs": {
+                    "a photo of a male": 0.048843517899513245,
+                    "a photo of a female": 0.9511565566062927
+                },
+                "image_path": "results_extended/A_photo_of_a_nurse_ours_linear_5.0_seed_42.png"
+            },
+            "seed_123": {
+                "clip_score": 32.394617795944214,
+                "fairness_probs": {
+                    "a photo of a male": 0.14964032173156738,
+                    "a photo of a female": 0.8503596782684326
+                },
+                "image_path": "results_extended/A_photo_of_a_nurse_ours_linear_5.0_seed_123.png"
+            },
+            "seed_2024": {
+                "clip_score": 31.726592779159546,
+                "fairness_probs": {
+                    "a photo of a male": 0.5889893174171448,
+                    "a photo of a female": 0.4110106825828552
+                },
+                "image_path": "results_extended/A_photo_of_a_nurse_ours_linear_5.0_seed_2024.png"
+            }
+        },
+        "ours_linear_7.0": {
+            "seed_42": {
+                "clip_score": 29.124829173088074,
+                "fairness_probs": {
+                    "a photo of a male": 0.04046690836548805,
+                    "a photo of a female": 0.9595330953598022
+                },
+                "image_path": "results_extended/A_photo_of_a_nurse_ours_linear_7.0_seed_42.png"
+            },
+            "seed_123": {
+                "clip_score": 31.768590211868286,
+                "fairness_probs": {
+                    "a photo of a male": 0.13094103336334229,
+                    "a photo of a female": 0.8690589666366577
+                },
+                "image_path": "results_extended/A_photo_of_a_nurse_ours_linear_7.0_seed_123.png"
+            },
+            "seed_2024": {
+                "clip_score": 30.9381902217865,
+                "fairness_probs": {
+                    "a photo of a male": 0.5737437009811401,
+                    "a photo of a female": 0.4262562692165375
+                },
+                "image_path": "results_extended/A_photo_of_a_nurse_ours_linear_7.0_seed_2024.png"
+            }
+        },
+        "ours_cosine_3.0": {
+            "seed_42": {
+                "clip_score": 30.303511023521423,
+                "fairness_probs": {
+                    "a photo of a male": 0.06293933093547821,
+                    "a photo of a female": 0.9370606541633606
+                },
+                "image_path": "results_extended/A_photo_of_a_nurse_ours_cosine_3.0_seed_42.png"
+            },
+            "seed_123": {
+                "clip_score": 33.00454020500183,
+                "fairness_probs": {
+                    "a photo of a male": 0.16082744300365448,
+                    "a photo of a female": 0.8391725420951843
+                },
+                "image_path": "results_extended/A_photo_of_a_nurse_ours_cosine_3.0_seed_123.png"
+            },
+            "seed_2024": {
+                "clip_score": 31.779932975769043,
+                "fairness_probs": {
+                    "a photo of a male": 0.5271002054214478,
+                    "a photo of a female": 0.47289979457855225
+                },
+                "image_path": "results_extended/A_photo_of_a_nurse_ours_cosine_3.0_seed_2024.png"
+            }
+        },
+        "ours_cosine_5.0": {
+            "seed_42": {
+                "clip_score": 30.599868297576904,
+                "fairness_probs": {
+                    "a photo of a male": 0.0689060166478157,
+                    "a photo of a female": 0.9310939311981201
+                },
+                "image_path": "results_extended/A_photo_of_a_nurse_ours_cosine_5.0_seed_42.png"
+            },
+            "seed_123": {
+                "clip_score": 32.45594501495361,
+                "fairness_probs": {
+                    "a photo of a male": 0.16480977833271027,
+                    "a photo of a female": 0.8351902365684509
+                },
+                "image_path": "results_extended/A_photo_of_a_nurse_ours_cosine_5.0_seed_123.png"
+            },
+            "seed_2024": {
+                "clip_score": 31.89537525177002,
+                "fairness_probs": {
+                    "a photo of a male": 0.43421295285224915,
+                    "a photo of a female": 0.5657870769500732
+                },
+                "image_path": "results_extended/A_photo_of_a_nurse_ours_cosine_5.0_seed_2024.png"
+            }
+        },
+        "ours_cosine_7.0": {
+            "seed_42": {
+                "clip_score": 29.610753059387207,
+                "fairness_probs": {
+                    "a photo of a male": 0.0844656229019165,
+                    "a photo of a female": 0.9155344367027283
+                },
+                "image_path": "results_extended/A_photo_of_a_nurse_ours_cosine_7.0_seed_42.png"
+            },
+            "seed_123": {
+                "clip_score": 31.981199979782104,
+                "fairness_probs": {
+                    "a photo of a male": 0.12496668100357056,
+                    "a photo of a female": 0.8750332593917847
+                },
+                "image_path": "results_extended/A_photo_of_a_nurse_ours_cosine_7.0_seed_123.png"
+            },
+            "seed_2024": {
+                "clip_score": 31.994006037712097,
+                "fairness_probs": {
+                    "a photo of a male": 0.4148516058921814,
+                    "a photo of a female": 0.5851483941078186
+                },
+                "image_path": "results_extended/A_photo_of_a_nurse_ours_cosine_7.0_seed_2024.png"
+            }
+        },
+        "ours_exponential_3.0": {
+            "seed_42": {
+                "clip_score": 30.28826415538788,
+                "fairness_probs": {
+                    "a photo of a male": 0.058830928057432175,
+                    "a photo of a female": 0.9411690831184387
+                },
+                "image_path": "results_extended/A_photo_of_a_nurse_ours_exponential_3.0_seed_42.png"
+            },
+            "seed_123": {
+                "clip_score": 33.20286273956299,
+                "fairness_probs": {
+                    "a photo of a male": 0.17178671061992645,
+                    "a photo of a female": 0.8282132744789124
+                },
+                "image_path": "results_extended/A_photo_of_a_nurse_ours_exponential_3.0_seed_123.png"
+            },
+            "seed_2024": {
+                "clip_score": 31.994980573654175,
+                "fairness_probs": {
+                    "a photo of a male": 0.5337197780609131,
+                    "a photo of a female": 0.4662802219390869
+                },
+                "image_path": "results_extended/A_photo_of_a_nurse_ours_exponential_3.0_seed_2024.png"
+            }
+        },
+        "ours_exponential_5.0": {
+            "seed_42": {
+                "clip_score": 30.6454598903656,
+                "fairness_probs": {
+                    "a photo of a male": 0.05951400101184845,
+                    "a photo of a female": 0.940485954284668
+                },
+                "image_path": "results_extended/A_photo_of_a_nurse_ours_exponential_5.0_seed_42.png"
+            },
+            "seed_123": {
+                "clip_score": 33.13535451889038,
+                "fairness_probs": {
+                    "a photo of a male": 0.1732395887374878,
+                    "a photo of a female": 0.8267604112625122
+                },
+                "image_path": "results_extended/A_photo_of_a_nurse_ours_exponential_5.0_seed_123.png"
+            },
+            "seed_2024": {
+                "clip_score": 31.95057511329651,
+                "fairness_probs": {
+                    "a photo of a male": 0.522793173789978,
+                    "a photo of a female": 0.4772067368030548
+                },
+                "image_path": "results_extended/A_photo_of_a_nurse_ours_exponential_5.0_seed_2024.png"
+            }
+        },
+        "ours_exponential_7.0": {
+            "seed_42": {
+                "clip_score": 30.674877762794495,
+                "fairness_probs": {
+                    "a photo of a male": 0.06247879937291145,
+                    "a photo of a female": 0.93752121925354
+                },
+                "image_path": "results_extended/A_photo_of_a_nurse_ours_exponential_7.0_seed_42.png"
+            },
+            "seed_123": {
+                "clip_score": 33.173584938049316,
+                "fairness_probs": {
+                    "a photo of a male": 0.17066505551338196,
+                    "a photo of a female": 0.8293349146842957
+                },
+                "image_path": "results_extended/A_photo_of_a_nurse_ours_exponential_7.0_seed_123.png"
+            },
+            "seed_2024": {
+                "clip_score": 31.901895999908447,
+                "fairness_probs": {
+                    "a photo of a male": 0.5056741237640381,
+                    "a photo of a female": 0.4943258464336395
+                },
+                "image_path": "results_extended/A_photo_of_a_nurse_ours_exponential_7.0_seed_2024.png"
+            }
+        }
+    }
+}
