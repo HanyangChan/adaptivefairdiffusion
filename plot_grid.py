@@ -22,9 +22,10 @@ def create_image_grid(prompt_name, display_name):
         return
 
     # Dimensions for the grid
-    padding = 10
-    header_height = 50
-    row_label_width = 100
+    img_w, img_h = 256, 256
+    padding = 20
+    header_height = 80
+    row_label_width = 150
     
     grid_w = row_label_width + len(columns) * img_w + (len(columns) + 1) * padding
     grid_h = header_height + len(seeds) * img_h + (len(seeds) + 1) * padding
@@ -34,9 +35,9 @@ def create_image_grid(prompt_name, display_name):
     
     # Try loading a font
     try:
-        font = ImageFont.truetype("arial.ttf", 20)
+        # Use a larger standard font on Mac
+        font = ImageFont.truetype("/Library/Fonts/Arial.ttf", 25)
     except:
-        # Fallback if arial is not available
         font = ImageFont.load_default()
         
     # Draw Column Headers
@@ -45,15 +46,15 @@ def create_image_grid(prompt_name, display_name):
         y = padding
         # Draw centered text
         text = col["title"]
-        # Use simple text placement
-        draw.text((x + img_w/2 - len(text)*3, y + 15), text, fill=(0,0,0), font=font)
+        # Approximate centering
+        draw.text((x + img_w/2 - len(text)*6, y + 25), text, fill=(0,0,0), font=font)
         
     # Draw Rows
     for row_idx, seed in enumerate(seeds):
         y = header_height + padding + row_idx * (img_h + padding)
         
         # Row label
-        draw.text((padding, y + img_h/2), f"Seed {seed}", fill=(0,0,0), font=font)
+        draw.text((padding, y + img_h/2 - 15), f"Seed {seed}", fill=(0,0,0), font=font)
         
         # Images
         for col_idx, col in enumerate(columns):
@@ -62,6 +63,7 @@ def create_image_grid(prompt_name, display_name):
             img_path = col["path_template"].format(prompt=prompt_name, seed=seed)
             if os.path.exists(img_path):
                 with Image.open(img_path) as img:
+                    img = img.resize((img_w, img_h), Image.Resampling.LANCZOS)
                     grid_img.paste(img, (x, y))
             else:
                 print(f"Missing {img_path}")
