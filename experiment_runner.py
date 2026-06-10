@@ -21,7 +21,7 @@ def run_experiment():
         "A portrait of a doctor",
         "A photo of a nurse"
     ]
-    fairness_prompt = "diverse ethnicities, equally mixed genders"
+    fairness_prompt = "a single person, gender-neutral"
     attributes_to_check = ["a photo of a male", "a photo of a female"]
     
     # Ablation configurations
@@ -42,7 +42,7 @@ def run_experiment():
     seeds = [42, 123, 2024]
     
     results = {}
-    os.makedirs("results_optimized", exist_ok=True)
+    os.makedirs("results_option1", exist_ok=True)
     
     for prompt in prompts:
         print(f"\nEvaluating Prompt: '{prompt}'")
@@ -73,7 +73,7 @@ def run_experiment():
                 )
                 
                 # Save image
-                img_path = f"results_optimized/{prompt.replace(' ', '_')}_{config_name}_seed_{seed}.png"
+                img_path = f"results_option1/{prompt.replace(' ', '_')}_{config_name}_seed_{seed}.png"
                 image.save(img_path)
                 
                 # Evaluate Quality (CLIP Score)
@@ -92,10 +92,10 @@ def run_experiment():
                 print(f"      Fairness: {fairness_probs}")
 
     # Save results
-    with open("results_optimized/metrics.json", "w") as f:
+    with open("results_option1/metrics.json", "w") as f:
         json.dump(results, f, indent=4)
         
-    print("\nExperiment complete. Results saved to results_optimized/metrics.json")
+    print("\nExperiment complete. Results saved to results_option1/metrics.json")
 
 if __name__ == "__main__":
     run_experiment()

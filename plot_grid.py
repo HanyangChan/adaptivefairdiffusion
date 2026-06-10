@@ -6,10 +6,10 @@ def create_image_grid(prompt_name, display_name):
     
     # Define columns
     columns = [
-        {"title": "No Guidance", "path_template": "results_optimized/{prompt}_baseline_none_seed_{seed}.png"},
-        {"title": "Fair Diffusion (Constant 3.0)", "path_template": "results_optimized/{prompt}_baseline_constant_3.0_seed_{seed}.png"},
+        {"title": "No Guidance", "path_template": "results_option1/{prompt}_baseline_none_seed_{seed}.png"},
+        {"title": "Fair Diffusion (Constant 3.0)", "path_template": "results_option1/{prompt}_baseline_constant_3.0_seed_{seed}.png"},
         {"title": "Ours (Reverse Cosine 7.0 Unoptimized)", "path_template": "results_reverse/{prompt}_reverse_cosine_7.0_seed_{seed}.png"},
-        {"title": "Ours (Reverse Cosine 7.0 Optimized)", "path_template": "results_optimized/{prompt}_reverse_cosine_7.0_seed_{seed}.png"}
+        {"title": "Ours (Reverse Cosine 7.0 Option1)", "path_template": "results_option1/{prompt}_reverse_cosine_7.0_seed_{seed}.png"}
     ]
     
     # Load first image to get dimensions
