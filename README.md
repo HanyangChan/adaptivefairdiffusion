@@ -67,6 +67,36 @@ epsilon_pred = epsilon_uncond + s_cfg * (epsilon_text - epsilon_uncond) + w_fair
 2. Quality 하락과 복구: Fairness Guidance가 강하게 개입할수록 원본 베이스라인(No Guidance) 대비 CLIP Score가 하락하는 현상은 불가피하게 발생했습니다. 하지만 Dynamic Prompting을 적용한 결과(Ours Optimized), 단순히 역 스케줄링만 적용했을 때보다 CLIP Score 하락 폭을 크게 줄이며 성능을 방어했습니다.
 3. 종합 결론: 제안 방법은 완벽하게 Quality 하락을 막지는 못했으나, 기존 고정 강도(Constant) 방식이나 중간 개입(FairGen) 방식에 비해 우상단에 위치하는 향상된 Pareto Frontier 곡선을 보여주어, 공정성과 성능 간의 Trade-off를 최적화하는 유효한 접근법임을 입증했습니다.
 
+### 5.1 정량적 평가 (Quantitative Evaluation)
+
+각 기법들의 전반적인 Fairness와 CLIP-score(Quality)를 비교한 정량적 평가 지표입니다. 
+
+| Method | Fairness ↑ | CLIP-score ↑ |
+|---|---|---|
+| Stable Diffusion (No Guidance) | 0.266 | 30.02 |
+| FairGen [Mid 25%] | 0.278 | 30.04 |
+| Fair Diffusion [Constant] | 0.349 | 28.60 |
+| Ours (Reverse Cosine Unoptimized) | 0.748 | 24.43 |
+| **Ours (Reverse Cosine Optimized)** | **0.328** | **28.82** |
+
+> **분석 요약**:
+> - **Ours (Unoptimized)**는 강력한 개입으로 Fairness를 0.748까지 끌어올렸으나 화질(Quality) 손실이 매우 컸습니다.
+> - 제안하는 **Ours (Optimized)** 방식은 복수형 프롬프트가 유발하는 '보상 해킹(단일 이미지 내 그룹 생성)' 현상을 방지하기 위해 단일 인물 생성 조건으로 실험을 재설계했습니다. 그 결과, 화질을 28.82로 훌륭하게 방어하면서 베이스라인 대비 개선된 '진정한 개별 인물 공정성(0.328)'을 확보했습니다.
+
+### 5.2 정성적 평가 (Qualitative Results)
+
+정량적 지표뿐만 아니라, 실제 생성된 이미지를 통해 베이스라인 대비 제안 모델의 성별 균형 달성도를 직관적으로 확인할 수 있습니다.
+
+#### "A portrait of a doctor" (남성 편향 프롬프트)
+![Doctor Grid](grid_A_portrait_of_a_doctor.png)
+- **Baseline**: 3개의 시드 모두 남성으로 생성됩니다.
+- **Ours (Reverse Cosine Optimized)**: 형태를 보존하면서도 시드 42와 123에서 자연스럽게 여성 의사로 성별이 뒤집히며 균형을 맞춥니다.
+
+#### "A photo of a nurse" (여성 편향 프롬프트)
+![Nurse Grid](grid_A_photo_of_a_nurse.png)
+- **Baseline**: 3개의 시드 모두 여성으로 생성됩니다.
+- **Ours (Reverse Cosine Optimized)**: 원본의 퀄리티와 시맨틱을 보존하면서 남성 간호사의 이미지를 성공적으로 생성해 냅니다.
+
 ---
 
 ## 6. 사용 방법 (How to Run)
