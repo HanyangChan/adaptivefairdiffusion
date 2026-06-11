@@ -79,9 +79,6 @@ epsilon_pred = epsilon_uncond + s_cfg * (epsilon_text - epsilon_uncond) + w_fair
 | Ours (Reverse Cosine Unoptimized) | 0.748 | 24.43 |
 | **Ours (Reverse Cosine Optimized)** | **0.328** | **28.82** |
 
-> **분석 요약**:
-> - **Ours (Unoptimized)**는 강력한 개입으로 Fairness를 0.748까지 끌어올렸으나 화질(Quality) 손실이 매우 컸습니다.
-> - 제안하는 **Ours (Optimized)** 방식은 복수형 프롬프트가 유발하는 '보상 해킹(단일 이미지 내 그룹 생성)' 현상을 방지하기 위해 단일 인물 생성 조건으로 실험을 재설계했습니다. 그 결과, 화질을 28.82로 훌륭하게 방어하면서 베이스라인 대비 개선된 '진정한 개별 인물 공정성(0.328)'을 확보했습니다.
 
 ### 5.2 정성적 평가 (Qualitative Results)
 
