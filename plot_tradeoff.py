@@ -47,16 +47,16 @@ def plot():
     except:
         data_rev = {}
     try:
-        data_opt = aggregate_data('results_optimized/metrics.json')
+        data_opt = aggregate_data('results_option1/metrics.json')
     except:
         data_opt = {}
         
     methods = {
-        "Baseline (No Guidance)": [data_ext.get("baseline_none")],
-        "Fair Diffusion (Constant)": [data_ext.get("baseline_constant_1.5"), data_ext.get("baseline_constant_3.0")],
+        "Baseline (No Guidance)": [data_opt.get("baseline_none")],
+        "Fair Diffusion (Constant)": [data_opt.get("baseline_constant_3.0")],
         "FairGen (Mid 25%)": [data_ext.get("baseline_fairgen")],
-        "Ours (Reverse, Unoptimized)": [data_rev.get("reverse_linear_5.0"), data_rev.get("reverse_linear_7.0")],
-        "Ours (Reverse + Dynamic Prompt)": [data_opt.get("reverse_linear_5.0"), data_opt.get("reverse_linear_7.0")]
+        "Ours (Reverse Cosine, Unoptimized)": [data_rev.get("reverse_cosine_5.0"), data_rev.get("reverse_cosine_7.0")],
+        "Ours (Reverse Cosine, Optimized)": [data_opt.get("reverse_cosine_5.0"), data_opt.get("reverse_cosine_7.0")]
     }
     
     plt.figure(figsize=(10, 7))
