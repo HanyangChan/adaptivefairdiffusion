@@ -59,7 +59,10 @@ def main():
         ("FairGen [Mid 25%]", data_ext.get("baseline_fairgen")),
         ("Fair Diffusion [Constant]", data_opt.get("baseline_constant_3.0")),
         ("Ours (Reverse Cosine Unoptimized)", data_rev.get("reverse_cosine_7.0")),
-        ("Ours (Reverse Cosine Optimized)", data_opt.get("reverse_cosine_7.0"))
+        ("Ours (Reverse Cosine Optimized)", data_opt.get("reverse_cosine_7.0")),
+        ("Adaptive (Orthogonal)", data_opt.get("adaptive_orthogonal_rc5.0")),
+        ("Adaptive (Dynamic Weight)", data_opt.get("adaptive_dynamic_rc5.0")),
+        ("Adaptive (Both)", data_opt.get("adaptive_both_rc5.0"))
     ]
     
     print("\\begin{table}[h]")

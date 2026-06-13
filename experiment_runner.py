@@ -37,6 +37,11 @@ def run_experiment():
         
         "reverse_exponential_5.0": {"scheduler_type": "reverse_exponential", "kwargs": {"min_w": 0.1, "max_w": 5.0}},
         "reverse_exponential_7.0": {"scheduler_type": "reverse_exponential", "kwargs": {"min_w": 0.1, "max_w": 7.0}},
+        
+        # New Adaptive configs based on reverse_cosine_5.0
+        "adaptive_orthogonal_rc5.0": {"scheduler_type": "reverse_cosine", "kwargs": {"min_w": 0.0, "max_w": 5.0}, "adaptive_mode": "orthogonal"},
+        "adaptive_dynamic_rc5.0": {"scheduler_type": "reverse_cosine", "kwargs": {"min_w": 0.0, "max_w": 5.0}, "adaptive_mode": "dynamic_weight"},
+        "adaptive_both_rc5.0": {"scheduler_type": "reverse_cosine", "kwargs": {"min_w": 0.0, "max_w": 5.0}, "adaptive_mode": "dynamic_weight_orthogonal"},
     }
     
     seeds = [42, 123, 2024]
@@ -69,7 +74,8 @@ def run_experiment():
                     guidance_scale=7.5,
                     scheduler_type=config["scheduler_type"],
                     scheduler_kwargs=config["kwargs"],
-                    generator=generator
+                    generator=generator,
+                    adaptive_mode=config.get("adaptive_mode", "none")
                 )
                 
                 # Save image

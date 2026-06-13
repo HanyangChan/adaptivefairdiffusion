@@ -56,12 +56,15 @@ def plot():
         "Fair Diffusion (Constant)": [data_opt.get("baseline_constant_3.0")],
         "FairGen (Mid 25%)": [data_ext.get("baseline_fairgen")],
         "Ours (Reverse Cosine, Unoptimized)": [data_rev.get("reverse_cosine_5.0"), data_rev.get("reverse_cosine_7.0")],
-        "Ours (Reverse Cosine, Optimized)": [data_opt.get("reverse_cosine_5.0"), data_opt.get("reverse_cosine_7.0")]
+        "Ours (Reverse Cosine, Optimized)": [data_opt.get("reverse_cosine_5.0"), data_opt.get("reverse_cosine_7.0")],
+        "Adaptive (Orthogonal)": [data_opt.get("adaptive_orthogonal_rc5.0")],
+        "Adaptive (Dynamic Weight)": [data_opt.get("adaptive_dynamic_rc5.0")],
+        "Adaptive (Both)": [data_opt.get("adaptive_both_rc5.0")]
     }
     
     plt.figure(figsize=(10, 7))
-    colors = ['gray', 'blue', 'green', 'orange', 'red']
-    markers = ['o', 's', '^', 'D', '*']
+    colors = ['gray', 'blue', 'green', 'orange', 'red', 'purple', 'brown', 'magenta']
+    markers = ['o', 's', '^', 'D', '*', 'P', 'X', 'h']
     
     for (name, points), color, marker in zip(methods.items(), colors, markers):
         valid_points = [p for p in points if p]

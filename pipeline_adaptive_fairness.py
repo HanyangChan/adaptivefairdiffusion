@@ -13,6 +13,7 @@ def generate_with_fairness(
     scheduler_kwargs: dict = None,
     generator: torch.Generator = None,
     eta: float = 0.0,
+    adaptive_mode: str = "none",
 ):
     if scheduler_kwargs is None:
         scheduler_kwargs = {}
@@ -68,12 +69,24 @@ def generate_with_fairness(
         # calculate fairness weight for current step
         fairness_weight = get_fairness_weight(scheduler_type, i, num_inference_steps, **scheduler_kwargs)
         
-        # CFG with Fairness
-        # V1: standard CFG + Fairness vector
-        # noise_pred = noise_pred_uncond + guidance_scale * (noise_pred_text - noise_pred_uncond) 
-        #            + fairness_weight * (noise_pred_fair - noise_pred_text)
+        d_text = noise_pred_text - noise_pred_uncond
+        d_fair = noise_pred_fair - noise_pred_text
         
-        noise_pred = noise_pred_uncond + guidance_scale * (noise_pred_text - noise_pred_uncond) + fairness_weight * (noise_pred_fair - noise_pred_text)
+        if "dynamic_weight" in adaptive_mode:
+            # Calculate cosine similarity across all dimensions
+            cos_sim = torch.nn.functional.cosine_similarity(d_text.flatten(), d_fair.flatten(), dim=0)
+            # Map [-1, 1] to [2, 0]: more conflict means higher weight
+            adaptive_factor = 1.0 - cos_sim.item()
+            fairness_weight = fairness_weight * adaptive_factor
+            
+        if "orthogonal" in adaptive_mode:
+            # Orthogonalize d_fair with respect to d_text
+            dot_fair_text = torch.sum(d_fair * d_text)
+            dot_text_text = torch.sum(d_text * d_text)
+            projection = (dot_fair_text / (dot_text_text + 1e-8)) * d_text
+            d_fair = d_fair - projection
+        
+        noise_pred = noise_pred_uncond + guidance_scale * d_text + fairness_weight * d_fair
         
         # compute the previous noisy sample x_t -> x_t-1
         latents = pipeline.scheduler.step(noise_pred, t, latents, **extra_step_kwargs).prev_sample
